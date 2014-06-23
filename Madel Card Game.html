@@ -1,0 +1,40 @@
+<script>
+var modelCardgame = function(Card) {
+	var s = prompt("What suit am I thinknig of?");
+	if (s == Card) {
+		console.log("Correct!")
+		alert("You Win!")
+	}
+	else {
+		alert("Wrong Answer")
+	}
+	return sign;
+}
+
+	function Deck ()	{
+		this.cards = []
+
+		this.count = function() {
+			return this.cards.length;
+		}
+
+		this.init = function() {
+			for (s = 1; s <=4; s++) {
+				this.cards.push(new Card(r, s));
+			}
+		}
+	}
+
+	this.shuffle = function () {
+		var copy = [], n = this.cards.length, random, take;
+
+		while (n) {
+
+			random = Math.floor(Math.random() * n--);
+
+			take = this.cards.splice(rand, 1)[0]
+			copy.push(take);
+		}
+		this.cards = copy;
+	}
+</script>
