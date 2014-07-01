@@ -1,19 +1,23 @@
 <script>
 confirm("This is a Model Card Game. You guess the suit that the computer is thinking of. Try it out.");
 var modelCardgame = function(Card) {
+	var D = new Deck();
 	var s = prompt("What suit am I thinknig of?");
 	if (s == Card) {
 		console.log("Correct!")
 		alert("You Win!")
+		Card.show();
 	}
 	else {
 		alert("Wrong Answer")
+		Card.show();
 	}
 	return sign;
+	var the = D.cards();
 }
 
 	function Deck ()	{
-		this.cards = []
+		this.cards = ["Diamond", "Club", "Spade", "Heart"]
 
 		this.count = function() {
 			return this.cards.length;
@@ -21,7 +25,7 @@ var modelCardgame = function(Card) {
 
 		this.init = function() {
 			for (s = 1; s <=4; s++) {
-				this.cards.push(new Card(r, s));
+				this.cards.push(new Card(r, [s - 1]));
 			}
 		}
 	}
@@ -38,4 +42,5 @@ var modelCardgame = function(Card) {
 		}
 		this.cards = copy;
 	}
+	modelCardgame();
 </script>
